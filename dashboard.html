@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cards - Desktop Dashboard</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        /* Global styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+            background-color: #F2F2F7;
+            color: #1C1C1E;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        /* Header */
+        .header {
+            background: #007AFF;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .notification-icon {
+            font-size: 20px;
+            position: relative;
+        }
+
+        .notification-icon .badge {
+            background: red;
+            color: white;
+            font-size: 10px;
+            border-radius: 50%;
+            padding: 4px;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        /* Card Section */
+        .cards {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 300px;
+            border-radius: 15px;
+            padding: 20px;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card.visa {
+            background: linear-gradient(135deg, #007AFF, #005ecb);
+        }
+
+        .card.mastercard {
+            background: linear-gradient(135deg, #FFA500, #FF6600);
+        }
+
+        .card-logo {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 18px;
+            background: white;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .card-details {
+            margin-top: 30px;
+        }
+
+        .card-number {
+            font-size: 20px;
+            letter-spacing: 2px;
+            margin: 15px 0;
+        }
+
+        .card-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        /* Payment Section */
+        .payment-section {
+            margin-top: 30px;
+        }
+
+        .payment-box {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .payment-header {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .payment-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .amount {
+            font-size: 18px;
+            font-weight: bold;
+            color: #1C1C1E;
+        }
+
+        .due {
+            font-size: 12px;
+            color: red;
+            font-weight: 500;
+        }
+
+        .pay-now {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 12px;
+            background: #34C759;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            margin-top: 15px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .pay-now:hover {
+            background: #28A745;
+        }
+
+        /* Rewards Section */
+        .rewards-section {
+            margin-top: 30px;
+        }
+
+        .rewards-box {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .rewards-header {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .rewards-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 16px;
+        }
+
+         /* Featured Cards Section */
+         .featCards-section {
+            margin-top: 30px;
+        }
+
+        .featCards-box {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .featCards-header {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .featCards-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 16px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #8E8E93;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="header-title">My Cards</div>
+        <div class="notification-icon">
+            <i class="fas fa-bell"></i>
+            <span class="badge">!</span>
+        </div>
+        <nav class="nav">
+            <a href="LandinPage.html">Home</a>
+            <a href="features_tab.html">Features</a>
+            <a href="#">Pricing</a>
+            <a href="#">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- Credit Cards -->
+        <div class="cards">
+            <div class="card visa">
+                <div class="card-logo">VISA</div>
+                <div class="card-details">
+                    <div class="card-number">•••• •••• •••• 5678</div>
+                    <div class="card-info">
+                        <div>CARDHOLDER<br><strong>John Smith</strong></div>
+                        <div>EXPIRES<br><strong>12/25</strong></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mastercard">
+                <div class="card-logo">Mastercard</div>
+                <div class="card-details">
+                    <div class="card-number">•••• •••• •••• 1234</div>
+                    <div class="card-info">
+                        <div>CARDHOLDER<br><strong>John Smith</strong></div>
+                        <div>EXPIRES<br><strong>09/24</strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Upcoming Payment Section -->
+        <div class="payment-section">
+            <div class="payment-box">
+                <div class="payment-header">Upcoming Payment</div>
+                <div class="payment-info">
+                    <div>
+                        <div>Chase Sapphire</div>
+                        <div style="font-size: 14px; color: gray;">Due: Mar 25</div>
+                    </div>
+                    <div>
+                        <div class="amount">$1,456.78</div>
+                        <div class="due">5 days left</div>
+                    </div>
+                </div>
+                <button class="pay-now">Pay Now</button>
+            </div>
+        </div>
+
+        <!-- Rewards Section -->
+        <div class="rewards-section">
+            <div class="rewards-box">
+                <div class="rewards-header">Rewards Overview</div>
+                <div class="rewards-info">
+                    <div>Earned This Month<br><strong>532 Points</strong></div>
+                    <div>Total Points<br><strong>2,456 Points</strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Cards -->
+    <div class="featCards">
+        <div class="featCards-box">
+            <div class="featCards-header">Featured Cards</div>
+            <div class="featCards-info">
+                <div>
+                    <h4>Chase Freedom Unlimited</h4>
+                    <p>Unlimted 1.5% Cash-back on all purchases</p>
+                    <p>$200 bonus after $500 spent in first 3 months</p>
+                    <p>0% APR for 15mo then variable APR of 19.49% - 28.24%</p>
+                    <p>No annual fee</p>
+                </div>
+
+                <div>
+                    <h4>Bank of America Travel Rewards</h4>
+                    <p>Unlimted 1.5% Cash-back on all purchases</p>
+                    <p>25,000 points after $100 spent in first 90 days</p>
+                    <p>0% APR for 15mo then variable APR of 18.24% - 28.24%</p>
+                    <p>No annual fee</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <div class="footer">© 2025 Desktop Credit Companion. All rights reserved.</div>
+
+</body>
+</html>

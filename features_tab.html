@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desktop Credit Companion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #007AFF;
+            --secondary: #5AC8FA;
+            --success: #34C759;
+            --danger: #FF3B30;
+            --warning: #FFCC00;
+            --dark: #1C1C1E;
+            --light: #F2F2F7;
+            --gray: #8E8E93;
+            --light-gray: #E5E5EA;
+            --extra-light-gray: #F2F2F7;
+            --black: #000000;
+            --white: #FFFFFF;
+            --border-radius: 12px;
+            --button-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+        }
+
+        .header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .header .nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 18px;
+            color: var(--gray);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        /* Make Dashboard Card Clickable */
+        .dashboard-card {
+            text-decoration: none;
+            display: block;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 20px;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            background: var(--light-gray);
+        }
+
+        .dashboard-card h3 {
+            font-size: 20px;
+            color: var(--black);
+            margin-bottom: 10px;
+        }
+
+        .dashboard-card p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        .footer {
+            background: var(--dark);
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Desktop Credit Companion</div>
+        <nav class="nav">
+            <a href="LandinPage.html">Home</a>
+            <a href="features_tab.html">Features</a>
+            <a href="#">Pricing</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="title">Welcome to Desktop Credit Companion</h1>
+        <p class="subtitle">Your personal credit card assistant, now optimized for desktop.</p>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Onboarding</h3>
+                <p>Get started with our easy onboarding process to find the perfect credit card for you.</p>
+            </div>
+
+            <!-- Turned the Dashboard Card into a Button -->
+            <a href="dashboard.html" class="dashboard-card">
+                <h3>Dashboard</h3>
+                <p>Track your credit cards, payments, and rewards all in one place.</p>
+            </a>
+
+            <div class="card">
+                <h3>Preferences</h3>
+                <p>Set your preferences to receive personalized credit card recommendations.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        &copy; 2023 Desktop Credit Companion. All rights reserved.
+    </footer>
+</body>
+</html>

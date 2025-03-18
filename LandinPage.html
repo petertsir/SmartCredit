@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Desktop Credit Companion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F2F2F7;
+            color: #1C1C1E;
+
+            /* Flexbox for full-height layout */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: #007AFF;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .hero {
+        text-align: center;
+        padding: 50px 20px;
+        background: #5AC8FA;
+        color: white;
+
+        /* Allow hero to grow and fill space */
+        flex: 1;
+        }
+
+        
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        } 
+        
+        
+
+        .hero .login {
+            display: inline-block; /* Ensures it behaves like a button */
+            background-color: #007AFF; /* Primary blue color */
+            color: white; /* White text */
+            text-decoration: none; /* Remove default underline */
+            padding: 12px 24px; /* Padding for a good size */
+            font-size: 18px; /* Readable font size */
+            font-weight: bold;
+            border-radius: 8px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background 0.3s; /* Smooth background color transition */
+            
+            position: absolute; /* Absolute positioning */
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%); /* Adjust for its own size */
+        }
+
+        .hero .login:hover {
+            background-color: #005ecb; /* Darker blue on hover */
+        }
+
+        .hero .login:active {
+            background-color: #004299; /* Even darker blue when clicked */
+            transform: translate(-50%, -50%) scale(0.98); /* Slightly shrink when clicked */
+        }
+        .footer {
+            background: #1C1C1E;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Desktop Credit Companion</div>
+        <nav class="nav">
+            <a href="LandinPage.html">Home</a>
+            <a href="features_tab.html">Features</a>
+            <a href="#">Pricing</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Welcome to Desktop Credit Companion</h1>
+        <p>Your ultimate tool for managing credit cards and maximizing rewards.</p>
+        <!-- <button class = "login button">Get Started</button> -->
+        <a href="login.html" class="login button">Get Started</a>
+    </div>
+
+    <footer class="footer">
+        &copy; 2025 Desktop Credit Companion. All rights reserved.
+    </footer>
+</body>
+</html>
