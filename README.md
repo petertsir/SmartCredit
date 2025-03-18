@@ -1,0 +1,2 @@
+# SmartCredit
+school project
